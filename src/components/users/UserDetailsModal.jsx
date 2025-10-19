@@ -49,10 +49,10 @@ const UserDetailsModal = ({ user, onClose }) => {
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
 
                     {/* Left Column: User Profile & Status */}
-                    <div className="col-span-1 space-y-4">
+                    <div className="col-span-1 space-y-4 w-full">
 
                         {/* Profile Info Card */}
-                        <div className="flex flex-col items-start p-6 gap-4  rounded-[8px] border border-[#E5E7EB]">
+                        <div className="flex flex-col items-start p-6 gap-4  rounded-[8px] border border-[#E5E7EB] w-full">
                             <div className="flex justify-center items-center flex-col w-full gap-4">
                                 <img src="https://plus.unsplash.com/premium_photo-1689977968861-9c91dbb16049?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=2070" alt={mockDetails.name} className="w-[96px] h-[96px] rounded-full object-cover mb-3" />
                                 <h3 className="text-xl font-semibold text-[#333C4A]">{user.name}</h3>
@@ -92,7 +92,7 @@ const UserDetailsModal = ({ user, onClose }) => {
                         </div>
 
                         {/* Status Information Card */}
-                        <div className="p-4 bg-white border border-gray-200 rounded-lg">
+                        <div className="p-4 bg-white border border-gray-200 rounded-lg w-full">
                             <h4 className="text-[13.6px] text-[#333C4A] font-medium">Status Information</h4>
                             <div className="text-sm space-y-1">
                                 <p className="flex justify-between">
@@ -127,7 +127,7 @@ const UserDetailsModal = ({ user, onClose }) => {
                     </div>
 
                     {/* Right Columns: Map and Activity */}
-                    <div className="col-span-2 space-y-4">
+                    <div className="col-span-2 space-y-4 w-[559px]">
 
                         {/* Current Location Map - Leaflet Integration with Zoom Control */}
                         <div className="p-4 bg-white border border-gray-200 rounded-lg">

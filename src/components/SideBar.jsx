@@ -13,7 +13,7 @@ const SideBar = () => {
                     <div className="w-10 h-10 bg-black rounded-full p-2">
                         <img src={images.sidebar_icon} alt="" />
                     </div>
-                    <p className="side_icon_text text-[15.3px]">Safe Rader Admin</p>
+                    <p className="side_icon_text text-[15.3px] whitespace-nowrap">Safe Rader Admin</p>
                 </div>
                 {/* this is for menus */}
                 <div className="flex flex-col  gap-3">

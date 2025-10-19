@@ -1,9 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 @import "tailwindcss";
 
 /* this is for body  */
 html,
 body {
-    font-family: Inter;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
 }
 
 /* this styling for side bar  */
@@ -233,7 +236,6 @@ body {
 
 /* this is for modal layout design */
 .modal_layout {
-    width: 881px;
     padding: 24px;
     gap: 24px;
     border-radius: 8px;
@@ -284,6 +286,8 @@ body {
     align-items: center;
     gap: 10px;
     border-radius: 6px;
+    color: #1F2937;
+    font-size: 14px;
     background: var(--Color-Yellow, #FDE047);
 }
 
@@ -527,4 +531,48 @@ body {
     border: 1px solid var(--Color-11, rgba(58, 58, 58, 0.80));
     background: #FFF;
     box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05), 0 0 0 0 rgba(0, 0, 0, 0.00), 0 0 0 0 rgba(0, 0, 0, 0.00);
+}
+
+/* this is for  request modal user card styling */
+.request_user_card {
+    width: 300px;
+    display: flex;
+    padding: 24px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    align-self: stretch;
+    border-radius: 8px;
+    border: 1px solid #E5E7EB;
+}
+
+/* this is for request user modal location part   */
+
+.request_modal_location {
+    display: flex;
+    padding: 12px 17px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    flex: 1 0 0;
+    align-self: stretch;
+    border-radius: 8px;
+    border: 1px solid #E5E7EB;
+}
+
+/* thi is for location  */
+.location {
+    height: 422px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    flex: 1 0 0;
+    align-self: stretch;
+    border-radius: 8px;
+    border: 1px solid rgba(73, 86, 100, 0.50);
+    background: #DDD;
+
+    /* Drop Shadow admin */
+    box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.10);
 }

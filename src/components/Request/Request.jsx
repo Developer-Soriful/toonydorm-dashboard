@@ -1,9 +1,7 @@
-// src/components/Request.jsx
-
 import { useState, useMemo } from 'react';
 import { requestsData } from '../../constans';
+import UserRequestModal from './UserRequestModal';
 
-// Sub-components
 const TableFilters = ({ searchTerm, onSearchChange, statusFilter, onStatusChange }) => {
     return (
         <div className="flex flex-col sm:flex-row justify-between items-center mb-6 gap-[200px]">
@@ -146,10 +144,10 @@ const HelperAvatars = ({ helpers }) => {
         </div>
     );
 };
-
-const TableRow = ({ request }) => {
+// this is for request table data functionality and data here ............
+const TableRow = ({ request, handleModal }) => {
     const handleViewDetails = () => {
-        alert(`Viewing details for Request ID: ${request.id}`);
+        handleModal(request)
     };
 
     const handleDeleteRequest = () => {
@@ -193,7 +191,7 @@ const TableRow = ({ request }) => {
                 <div className="flex items-center space-x-2">
                     <button
                         onClick={handleViewDetails}
-                        className="text-blue-600 "
+                        className="text-blue-600 cursor-pointer"
                         title="View Details"
                     >
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17" fill="none">
@@ -210,7 +208,7 @@ const TableRow = ({ request }) => {
                     </button>
                     <button
                         onClick={handleDeleteRequest}
-                        className="text-red-600 "
+                        className="text-red-600 cursor-pointer"
                         title="Delete Request"
                     >
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17" fill="none">
@@ -233,7 +231,7 @@ const TableRow = ({ request }) => {
 };
 
 
-const RequestsTable = ({ data }) => {
+const RequestsTable = ({ data, handleModal }) => {
     const tableHeaders = [
         'Request ID',
         'Help Seeker',
@@ -264,7 +262,7 @@ const RequestsTable = ({ data }) => {
                 </thead>
                 <tbody className="bg-white divide-y divide-gray-200">
                     {data.length > 0 ? (
-                        data.map((request) => <TableRow key={request.id} request={request} />)
+                        data.map((request) => <TableRow key={request.id} request={request} handleModal={handleModal} />)
                     ) : (
                         <tr>
                             <td colSpan={tableHeaders.length} className="px-6 py-4 whitespace-nowrap text-center text-sm text-gray-500">
@@ -344,7 +342,13 @@ const Request = () => {
     const [searchTerm, setSearchTerm] = useState('');
     const [statusFilter, setStatusFilter] = useState('All');
     const [currentPage, setCurrentPage] = useState(1);
-    const itemsPerPage = 10; // As seen in the mock data, showing 10-15 items per page
+    const itemsPerPage = 10;
+    const [openModal, setOpenModal] = useState(false)
+    const [selectedRequest, setSelectedRequest] = useState(null);
+    const handleModal = (request = null) => {
+        setSelectedRequest(request); // set the request to display in modal
+        setOpenModal(!openModal);
+    }
 
     // Filter and paginate data
     const filteredAndPaginatedData = useMemo(() => {
@@ -397,7 +401,7 @@ const Request = () => {
                         onStatusChange={setStatusFilter}
                     />
 
-                    <RequestsTable data={filteredAndPaginatedData} />
+                    <RequestsTable data={filteredAndPaginatedData} handleModal={handleModal} />
 
                     <TablePagination
                         totalItems={totalFilteredItems}
@@ -407,6 +411,9 @@ const Request = () => {
                     />
                 </div>
             </div>
+            {
+                openModal && selectedRequest && <UserRequestModal request={selectedRequest} onClose={handleModal} />
+            }
         </div>
     );
 };
