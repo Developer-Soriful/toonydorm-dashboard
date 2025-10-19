@@ -1,6 +1,7 @@
 // src/components/AdminProfilePage.jsx (or wherever you want to put it)
 
 import React, { useState } from 'react';
+import { Link } from 'react-router';
 
 // Reusable Input Field Component
 const PasswordInputField = ({ label, placeholder, value, onChange }) => {
@@ -73,14 +74,14 @@ const AdminProfilePage = () => {
             {/* Header */}
             <div className="flex justify-between items-center mb-8">
                 <h1 className="font-bold text-[20px] text-[#1F2937]">Admin Profile</h1>
-                <button className="user_logout">
+                <Link to={'/login'} className="user_logout">
                     <svg xmlns="http://www.w3.org/2000/svg" width="19" height="18" viewBox="0 0 19 18" fill="none">
                         <path d="M12.0625 12.75L15.8125 9L12.0625 5.25" stroke="#374151" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                         <path d="M15.8125 9H6.8125" stroke="#374151" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                         <path d="M6.8125 15.75H3.8125C3.41468 15.75 3.03314 15.592 2.75184 15.3107C2.47054 15.0294 2.3125 14.6478 2.3125 14.25V3.75C2.3125 3.35218 2.47054 2.97064 2.75184 2.68934C3.03314 2.40804 3.41468 2.25 3.8125 2.25H6.8125" stroke="#374151" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                     </svg>
                     <span className='text-[13.6px] text-[#1F2937] font-medium'>Logout</span>
-                </button>
+                </Link>
             </div>
 
             {/* Main Content Area */}
