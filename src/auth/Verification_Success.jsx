@@ -22,7 +22,7 @@ const Verification_Success = () => {
                 <div className="w-full">
                     <div className="w-full flex flex-col gap-5">
                         {/* this is for login submmiting button --> login btn */}
-                        <Link to={'/reset-success'} className="login_btn text-[#333C4A] text-sm cursor-pointer">
+                        <Link to={'/reset-password'} className="login_btn text-[#333C4A] text-sm cursor-pointer">
                             Go to Password Reset
                         </Link>
                     </div>

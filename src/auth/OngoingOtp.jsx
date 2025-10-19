@@ -5,7 +5,7 @@ const OngoingOtp = () => {
     const navigate = useNavigate()
     useEffect(() => {
         const timer = setTimeout(() => {
-            navigate('/reset-success', { replace: false })
+            navigate('/verify-success', { replace: false })
         }, 2000);
         return () => clearTimeout(timer);
     }, [navigate]);
