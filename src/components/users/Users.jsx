@@ -241,7 +241,7 @@ const Users = () => {
                 {/* Main Table */}
                 <div className="overflow-x-auto"> {/* Ensures horizontal scroll on small screens */}
                     <table className="min-w-full divide-y divide-gray-200">
-                        <thead className="bg-[#f5f5f5] text-[#333] text-[14px] font-semibold">
+                        <thead className="bg-[#f5f5f5] text-[#333] text-[14px] font-[600]">
                             <tr>
                                 <th scope="col" className="px-6 py-3 text-left uppercase tracking-wider">User ID</th>
                                 <th scope="col" className="px-6 py-3 text-left uppercase tracking-wider">Name</th>
