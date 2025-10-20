@@ -1,6 +1,8 @@
 // src/components/AdminProfilePage.jsx (or wherever you want to put it)
 
 import React, { useState } from 'react';
+import { FaEyeSlash } from 'react-icons/fa';
+import { IoEyeSharp } from 'react-icons/io5';
 import { Link } from 'react-router';
 
 // Reusable Input Field Component
@@ -18,7 +20,7 @@ const PasswordInputField = ({ label, placeholder, value, onChange }) => {
                     placeholder={placeholder}
                     value={value}
                     onChange={onChange}
-                    className="w-full pl-10 pr-4 py-2 border text-[#ccc] border-[#E0E0E0] rounded-[6px] focus:outline-none"
+                    className="w-full pl-10 pr-4 py-2 border text-[#333] border-[#E0E0E0] rounded-[6px] focus:outline-none"
                 />
                 <span className="absolute inset-y-0 left-0 flex items-center pl-3">
                     {/* Lock Icon */}
@@ -34,14 +36,10 @@ const PasswordInputField = ({ label, placeholder, value, onChange }) => {
                 >
                     {/* Eye Icon */}
                     {showPassword ? (
-                        <svg className="h-5 w-5 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13.875 18.25V18S12 20 12 20s-1.875-2-1.875-2M9.75 15.75L12 18l2.25-2.25M4.75 10.75a7 7 0 1114.5 0 7 7 0 01-14.5 0z" />
-                        </svg>
+                        <FaEyeSlash />
+
                     ) : (
-                        <svg className="h-5 w-5 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
-                        </svg>
+                        <IoEyeSharp />
                     )}
                 </button>
             </div>

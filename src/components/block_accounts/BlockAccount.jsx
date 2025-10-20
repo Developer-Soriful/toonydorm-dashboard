@@ -94,7 +94,7 @@ const BlockAccount = () => {
                                 {['User ID', 'Name', 'Email', 'Date Blocked', 'Actions'].map((header) => (
                                     <th
                                         key={header}
-                                        className="px-6 py-3 text-left text-xs font-semibold text-gray-500 uppercase tracking-wider"
+                                        className="px-6 py-3 text-left text-[14px] font-semibold text-[#333] uppercase tracking-wider"
                                     >
                                         {header}
                                     </th>
@@ -105,7 +105,7 @@ const BlockAccount = () => {
                         <tbody className="bg-white divide-y divide-gray-200">
                             {usersData.map((user, index) => (
                                 <tr key={index} className="hover:bg-gray-50">
-                                    <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">{user.id}</td>
+                                    <td className="px-6 py-4 whitespace-nowrap text-sm">{user.id}</td>
 
                                     {/* Name with Avatar column */}
                                     <td className="px-6 py-4 whitespace-nowrap">
@@ -113,7 +113,7 @@ const BlockAccount = () => {
                                             <div className="flex-shrink-0 h-8 w-8 rounded-full overflow-hidden">
                                                 <img className="h-full w-full object-cover" src={user.avatar} alt={user.name} />
                                             </div>
-                                            <div className="ml-4 text-sm font-medium text-gray-900">{user.name}</div>
+                                            <div className="ml-4 text-sm font-medium">{user.name}</div>
                                         </div>
                                     </td>
 

@@ -241,15 +241,15 @@ const Users = () => {
                 {/* Main Table */}
                 <div className="overflow-x-auto"> {/* Ensures horizontal scroll on small screens */}
                     <table className="min-w-full divide-y divide-gray-200">
-                        <thead className="bg-[#f5f5f5] text-[#333] text-[14px] font-[600]">
+                        <thead className="bg-[#f5f5f5] text-[#333] text-[14px]">
                             <tr>
-                                <th scope="col" className="px-6 py-3 text-left uppercase tracking-wider">User ID</th>
-                                <th scope="col" className="px-6 py-3 text-left uppercase tracking-wider">Name</th>
-                                <th scope="col" className="px-6 py-3 text-left uppercase tracking-wider">Email</th>
-                                <th scope="col" className="px-6 py-3 text-left uppercase tracking-wider">Role</th>
-                                <th scope="col" className="px-6 py-3 text-left uppercase tracking-wider">Active Status</th>
-                                <th scope="col" className="px-6 py-3 text-left uppercase tracking-wider">Last Active</th>
-                                <th scope="col" className="px-6 py-3 text-left uppercase tracking-wider">Actions</th>
+                                <th scope="col" className="px-6 py-3 text-left uppercase tracking-wider font-semibold">User ID</th>
+                                <th scope="col" className="px-6 py-3 text-left uppercase tracking-wider font-semibold">Name</th>
+                                <th scope="col" className="px-6 py-3 text-left uppercase tracking-wider font-semibold">Email</th>
+                                <th scope="col" className="px-6 py-3 text-left uppercase tracking-wider font-semibold">Role</th>
+                                <th scope="col" className="px-6 py-3 text-left uppercase tracking-wider font-semibold">Active Status</th>
+                                <th scope="col" className="px-6 py-3 text-left uppercase tracking-wider font-semibold">Last Active</th>
+                                <th scope="col" className="px-6 py-3 text-left uppercase tracking-wider font-semibold">Actions</th>
                             </tr>
                         </thead>
                         <tbody className="bg-white divide-y divide-gray-100">
