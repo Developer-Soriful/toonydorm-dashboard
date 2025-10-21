@@ -62,7 +62,7 @@ const UserRow = ({ user, onViewDetails }) => (
             </span>
         </td>
         <td className="px-6 text-[#333] text-[14px]">{user.lastActive}</td>
-        <td className='flex justify-center items-center gap-3 pb-6'>
+        <td className='flex justify-center items-center gap-3 mr-15 pb-6'>
             <span className='cursor-pointer' onClick={() => onViewDetails(user)}>
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
                     <path d="M1.37468 8.232C1.31912 8.08232 1.31912 7.91768 1.37468 7.768C1.91581 6.4559 2.83435 5.33403 4.01386 4.5446C5.19336 3.75517 6.58071 3.33374 8.00001 3.33374C9.41932 3.33374 10.8067 3.75517 11.9862 4.5446C13.1657 5.33403 14.0842 6.4559 14.6253 7.768C14.6809 7.91768 14.6809 8.08232 14.6253 8.232C14.0842 9.5441 13.1657 10.666 11.9862 11.4554C10.8067 12.2448 9.41932 12.6663 8.00001 12.6663C6.58071 12.6663 5.19336 12.2448 4.01386 11.4554C2.83435 10.666 1.91581 9.5441 1.37468 8.232Z" stroke="#2563EB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
@@ -249,7 +249,7 @@ const Users = () => {
                                 <th scope="col" className="px-6 py-3 text-left uppercase tracking-wider font-semibold">Role</th>
                                 <th scope="col" className="px-6 py-3 text-left uppercase tracking-wider font-semibold">Active Status</th>
                                 <th scope="col" className="px-6 py-3 text-left uppercase tracking-wider font-semibold">Last Active</th>
-                                <th scope="col" className="px-6 py-3 text-left uppercase tracking-wider font-semibold">Actions</th>
+                                <th scope="col" className="px-6 py-3 text-start uppercase tracking-wider font-semibold">Actions</th>
                             </tr>
                         </thead>
                         <tbody className="bg-white divide-y divide-gray-100">

@@ -2,6 +2,9 @@ import { useState } from 'react';
 import LocationMap from '../ui/LocationMap';
 
 const UserDetailsModal = ({ user, onClose }) => {
+
+    // this is for testing
+    console.log(user)
     // Static mock data matching the User Details image (image_dd1faf.png)
     const mockDetails = {
         name: 'John Doe',
@@ -86,7 +89,9 @@ const UserDetailsModal = ({ user, onClose }) => {
                                 </p>
                                 <p className="text-sm font-medium text-[#22C55E] flex items-center gap-4">
                                     <span className="h-[10px] w-[10px] rounded-full bg-[#22C55E]"></span>
-                                    {user.activeStatus}
+                                    {/* {user.activeStatus} */}
+                                    <span className='text-[#333C4A] text-[12px]'>online</span>
+                                    
                                 </p>
                             </div>
                         </div>
@@ -97,11 +102,11 @@ const UserDetailsModal = ({ user, onClose }) => {
                             <div className="text-sm space-y-1">
                                 <p className="flex justify-between">
                                     <span className="text-[11.9px] text-[#333C4A]">Account Status:</span>
-                                    <span className="font-medium text-green-600">Online</span>
+                                    <span className="online_status">Online</span>
                                 </p>
                                 <p className="flex justify-between">
                                     <span className="text-[11.9px] text-[#333C4A]">Location Sharing:</span>
-                                    <span className="font-medium text-green-600">Enabled</span>
+                                    <span className="online_status">Enabled</span>
                                 </p>
                                 <p className="flex justify-between">
                                     <span className="text-[11.9px] text-[#333C4A]">Last Active:</span>

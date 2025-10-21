@@ -77,7 +77,6 @@ const BlockAccount = () => {
                                 id="status-filter"
                                 className="block h-[45px] w-full rounded-[6px] border border-gray-300 py-2 pl-3 pr-10 text-base text-gray-700 focus:border-yellow-500 focus:outline-none focus:ring-2 focus:ring-yellow-500 sm:text-sm"
                             >
-                                <option value="All"> All</option>
                                 <option value="Online">Online</option>
                                 <option value="Offline">Offline</option>
                             </select>
@@ -94,11 +93,13 @@ const BlockAccount = () => {
                                 {['User ID', 'Name', 'Email', 'Date Blocked', 'Actions'].map((header) => (
                                     <th
                                         key={header}
-                                        className="px-6 py-3 text-left text-[14px] font-semibold text-[#333] uppercase tracking-wider"
+                                        className={`px-6 py-3 text-left text-[14px] font-semibold text-[#333] uppercase tracking-wider 
+                                        ${header === 'Actions' ? 'text-right' : 'text-left'}`}
                                     >
                                         {header}
                                     </th>
                                 ))}
+
                             </tr>
                         </thead>
                         {/* Table Body */}
@@ -121,7 +122,7 @@ const BlockAccount = () => {
                                     <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{user.dateBlocked}</td>
 
                                     {/* Actions column */}
-                                    <td className="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
+                                    <td className="px-6 py-4  whitespace-nowrap text-end text-sm font-medium">
                                         <button onClick={() => onViewDetails(user)} className="text-blue-500 hover:text-blue-700 p-2 rounded-full hover:bg-blue-50 transition duration-150 cursor-pointer">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17" fill="none">
                                                 <g clip-path="url(#clip0_360_18614)">

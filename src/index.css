@@ -576,3 +576,18 @@ body {
     /* Drop Shadow admin */
     box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.10);
 }
+
+
+/* this is for status  */
+.online_status {
+    display: flex;
+    padding: 3px 8px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 9999px;
+    background: #DCFCE7;
+    font-size: 10px;
+    color: #166534;
+    font-weight: 600;
+}
