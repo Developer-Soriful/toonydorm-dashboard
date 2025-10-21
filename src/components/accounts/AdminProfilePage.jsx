@@ -36,10 +36,9 @@ const PasswordInputField = ({ label, placeholder, value, onChange }) => {
                 >
                     {/* Eye Icon */}
                     {showPassword ? (
-                        <FaEyeSlash />
-
-                    ) : (
                         <IoEyeSharp />
+                    ) : (
+                        <FaEyeSlash />
                     )}
                 </button>
             </div>
